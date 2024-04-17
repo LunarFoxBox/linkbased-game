@@ -1,0 +1,188 @@
+{
+    "Title": "Into the Mirror",
+    "Credits": "Created by Jade Hernandez",
+    "InitialLocation": "Real Bedroom",
+    "Locations": {
+        "Real Bedroom": {
+            "Body": "You wake up in your ordinary room with a black cat sitting on the bed. You get a strange feeling coming from the large mirror against the wall...",
+            "Choices": [
+                {
+                    "Text": "Gaze into mirror",
+                    "Target": "Mirror"
+                },
+                {
+                    "Text": "Pet cat",
+                    "Interaction": {
+                        "Text": "The cat purrs as you pet it and nuzzles against your hand."
+                    }
+                }
+            ]
+        },
+        "Mirror": {
+            "Body": "You feel yourself drawn to the mirror. Your vision goes black before coming back.",
+            "Choices": [
+                {
+                    "Text": "Gather your senses",
+                    "Target": "Mirror Bedroom"
+                }
+            ]
+        },
+        "Mirror Bedroom": {
+            "Body": "The room resembles your room but off and your cat is nowhere to be found.",
+            "Choices": [
+                {
+                    "Text": "Travel to the hall",
+                    "Target": "Hall"
+                }
+            ]
+        },
+        "Hall": {
+            "Body": "The hall is longer and more ancient than the hall in your home... There is a door to a basement and stairs to upstairs despite your home not having either.",
+            "Choices": [
+                {
+                    "Text": "Descend into the basement",
+                    "Target": "Basement"
+                },
+                {
+                    "Text": "Ascend up the stairs",
+                    "Target": "Upstairs"
+                },
+                {
+                    "Text": "Bedroom",
+                    "Target": "Mirror Bedroom"
+                }
+            ]
+        },
+
+        "Upstairs": {
+            "Body": "On the upper level, you hear distant whispers. There is an ornate door at the end of the hall and a purple door with decorative flowers cracked open on the right side.",
+            "Choices": [
+                {
+                    "Text": "Open the ornate door",
+                    "Target": "Study"
+                },
+                {
+                    "Text": "Open the purple door",
+                    "Target": "Child's Room"
+                },
+                {
+                    "Text": "Downstairs",
+                    "Target": "Hall"
+                }
+            ]
+        },
+        "Study": {
+            "Body": "The room is a study with books and papers scatter across the room. It looks like what you would imagine a wizard's study would look like.",
+            "Choices": [
+                {
+                    "Text": "Investigate the papers and books",
+                    "Interaction": {
+                        "Text": "You find old runes that seem to complete a magical circle that was designed to escape this world.",
+                        "Key": true
+                    }
+                },
+                {
+                    "Text": "Exit the room",
+                    "Target": "Upstairs"
+                }
+            ]
+        },
+        "Child's Room": {
+            "Body": "The room is that of a child's room. It has colorful drawings and there is a fairytale book titled Lost in Reflectia on the ground.",
+            "Choices": [
+                {
+                    "Text": "Read the Book",
+                    "Interaction": {
+                        "Text": "The book describes the journey of child trying to get back to their world from a world of reflections, Reflectia.<br>One part of the book stands out to you - The ferry operator whispered to the child, 'Careful with the water my dear. Many tend to get lost in it...'"
+                    }
+                },
+                {
+                    "Text": "Exit the room",
+                    "Target": "Upstairs"
+                }
+            ]
+        },
+
+        "Basement": {
+            "Body": "The basement is dark and has many lines and symbols etched into the walls and floor.<br>One almost finished circle in the middle of the room catches your eye.",
+            "Choices": [
+                {
+                    "Text": "Finish the circle",
+                    "Interaction": {
+                        "Text": "The runic circle is etched into the stone floor and has a part of it missing.",
+                        "Lock": {
+                            "Fail": "You are unsure what runes would complete the circle.",
+                            "Success": "You have successfully completed the magic circle.",
+                            "Complete": {
+                                "Text": "Activate the circle",
+                                "Target": "Reflective Shore"
+                            }
+                        }
+                    }
+                },
+                {
+                    "Text": "Upstairs",
+                    "Target": "Hall"
+                }
+            ]
+        },
+        "Reflective Shore": {
+            "Body": "You find yourself on the shore of a lake that doesn't quite look like water. There is a ferry operator in a long hood that completely covers them.. There seems to also be a forest to the side that seems to reflect light and surroundings.",
+            "Choices": [
+                {
+                    "Text": "Head into the forest",
+                    "Target": "Forest"
+                },
+                {
+                    "Text": "Board the ferry",
+                    "Target": "Reflective Lake"
+                }
+            ]
+        },
+        "Forest": {
+            "Body": "The forest has a magical kind feeling. You feel like you may get lost in this forest but there may be a village or something to help you think.",
+            "Choices": [
+                {
+                    "Text": "Head deeper in",
+                    "Target": "Deep Forest"
+                },
+                {
+                    "Text": "Return to the shore",
+                    "Target": "Reflective Shore"
+                }
+            ]
+        },
+        "Deep Forest": {
+            "Body": "You wonder deeper and deeper into the forest. It seems to expand infinitely somehow with no sign of where you came from. All you can do is continue on with hope that you make it out..."
+        },
+        "Reflective Lake": {
+            "Body": "You board the ferry onto the lake. The water reflects the sky and itself somehow. You feel something draw you to gaze into the waters but it's unclear it intents to help.",
+            "Choices": [
+                {
+                    "Text": "Gaze into the waters",
+                    "Target": "Waters"
+                },
+                {
+                    "Text": "Remain on the ferry",
+                    "Target": "Ferry"
+                },
+                {
+                    "Text": "Gaze into the sky",
+                    "Target": "Sky"
+                }
+            ]
+        },
+        "Waters": {
+            "Body": "the waters reflect not just themselves and the sky, but you see your life being reflected and you can't look away. You don't know which direction is which and eventually stumble in before your vision goes black like when you entered this world...",
+            "Choices": []
+        },
+        "Ferry": {
+            "Body": "You remain on the ferry and then as the ferry approaches land, your vision goes black like when you entered this world...",
+            "Choices": []
+        },
+        "Sky": {
+            "Body": "You gaze into the sky and see the reflection of the water and itself. Past these reflections you see the reflection of your future back home and then your vision goes black similar to when you entered this world...",
+            "Choices": []
+        }
+    }
+}
